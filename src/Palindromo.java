@@ -3,7 +3,7 @@ import java.util.Stack;
 public class Palindromo {
 
     public static void main(String[] args) {
-       palabra("AnulalaLuna" );
+       palabra("AnitaLavaLaTina" );
     }
 
     public static void palabra(String P) {
