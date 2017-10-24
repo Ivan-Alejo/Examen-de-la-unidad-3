@@ -7,7 +7,7 @@ public class Ordenar {
     public static void main(String[] args) {
 
         Stack<String> pila = new Stack<String>();
-        int[] vec= new int[10];
+        int[] vec= new int[11];
         int c=0;int d=0;
 
         pila.push(Integer.toString(8));
@@ -20,6 +20,7 @@ public class Ordenar {
         pila.push(Integer.toString(6));
         pila.push(Integer.toString(100));
         pila.push(Integer.toString(-100));
+        pila.push(Integer.toString(0));
 
         while (!pila.empty()){
             vec[c]=Integer.parseInt(pila.pop());
@@ -29,7 +30,7 @@ public class Ordenar {
         boolean b =false;
         while (!b){
             b =true;
-            for ( int i= 0; i<9; i++ ){
+            for ( int i= 0; i<10; i++ ){
                 if(vec[i] > vec[i+1]){
                     z=vec[i];
                     vec[i]= vec[i+1];
@@ -38,7 +39,7 @@ public class Ordenar {
                 }
             }
         }
-        for ( int i= 0; i<10; i++ )
+        for ( int i= 0; i<11; i++ )
             pila.push(Integer.toString(vec[i]));
         System.out.println(pila );
 
@@ -51,7 +52,7 @@ public class Ordenar {
        boolean y = false;
        while (!y){
            y =true;
-           for ( int i= 0; i<9; i++ ){
+           for ( int i= 0; i<10; i++ ){
                if(vec[i]<vec[i+1]){
                    x=vec[i];
                    vec[i]= vec[i+1];
@@ -60,7 +61,7 @@ public class Ordenar {
                }
            }
        }
-        for ( int j= 0; j<10; j++ )
+        for ( int j= 0; j<11; j++ )
        pila.push(Integer.toString(vec[j]));
        System.out.println(pila );
 
@@ -68,6 +69,8 @@ public class Ordenar {
 
     }
 }
+
+
 
 
 
